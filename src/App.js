@@ -1,15 +1,36 @@
-import Todos from "./components/Todos"
-import ColorModeContainer from "./components/ColorModeContainer"
+import {Route, Switch, BrowserRouter as Router } from "react-router-dom"
+import TodosApp from "./Pages/TodosApp"
+import Login from "./Pages/Login"
+import Navbar from "./components/TodosApp/Navbar"
+import { Darkmode } from "./context/DarkModeContext"
+
 
 function App() {
   return (
-    <ColorModeContainer>
-      <div className="container my-4">
-        <h1 className="text-center">ToDos App</h1>
-        <Todos />
-      </div>
-    </ColorModeContainer>
+  <Router>
+      <Darkmode>
+        <Navbar className="stcky-top" />
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/todos">
+            <TodosApp />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Darkmode>
+  </Router>
   )
+}
+
+function Home() {
+  return <h2>Home</h2>;
 }
 
 export default App

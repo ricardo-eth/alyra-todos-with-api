@@ -1,10 +1,13 @@
-import { useDarkMode } from "../context/DarkModeContext"
+import { useDarkMode } from "../../context/DarkModeContext"
 
-const ColorModeSwitcher = ({ setDarkMode }) => {
+const ColorModeSwitcher = () => {
+
+  const {darkMode, setDarkMode} = useDarkMode()
+
   const handleModeChange = () => {
     setDarkMode((mode) => !mode)
   }
-  const darkMode = useDarkMode()
+  
   return (
     <div className="form-check form-switch">
       <input
@@ -14,8 +17,8 @@ const ColorModeSwitcher = ({ setDarkMode }) => {
         onChange={handleModeChange}
         checked={darkMode}
       />
-      <label className="form-check-label" htmlFor="activate">
-        Mode Sombre
+      <label className="form-check-label text-white" htmlFor="activate">
+        Dark
       </label>
     </div>
   )
