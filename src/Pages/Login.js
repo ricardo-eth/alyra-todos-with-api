@@ -8,8 +8,6 @@ const login = {
   loading: false,
   connected: false,
   error: "",
-  registration: false,
-  errorReg: "",
 };
 
 const Login = () => {
