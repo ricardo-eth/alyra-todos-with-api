@@ -14,7 +14,7 @@ const login = {
 
 const Login = () => {
   const [state, dispatch] = useReducer(loginReducer, login);
-  const { registration, errorReg, loading, connected, error } = state;
+  const { loading, connected, error } = state;
   const isMounted = useIsMounted();
 
   const handleLoginButton = (event) => {
