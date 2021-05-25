@@ -34,38 +34,6 @@ const Navbar = () => {
                 Todos
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="nav"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a className="dropdown-item" href="nav">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="nav">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="nav">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/login">
                 Login
